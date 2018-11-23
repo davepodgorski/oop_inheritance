@@ -46,6 +46,7 @@ class Multilinguist
   # @param msg [String] A message to be translated
   # @return [String] A rough translation of msg
   def say_in_local_language(msg)
+    return "Your message in #{@current_lang}: #{msg}"
     params = {query: {text: msg, to: @current_lang, from: 'en'}}
     response = HTTParty.get(TRANSLTR_BASE_URL, params)
     json_response = JSON.parse(response.body)
