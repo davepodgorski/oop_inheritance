@@ -1,5 +1,5 @@
 require "./multilinguist.rb"
-#
+
 class Math_Genius < Multilinguist
 
   #
@@ -15,7 +15,7 @@ class Math_Genius < Multilinguist
   def thats_numberwang(numbers)
     total = numberwang(numbers)
     message = "The total of your numbers is #{total}."
-    puts say_in_local_language(msg)
+    puts say_in_local_language(message)
   end
 
 
